@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Solution {
+class Solution {
 
     // Declaring vaiables
     int[][] mtx_1;
