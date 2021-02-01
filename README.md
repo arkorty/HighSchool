@@ -1,2 +1,2 @@
 # Description
-This repository contains solutions to some of the problems I solved for my ISC CS exam.
+Programs I wrote to practice for my grade 12 Computer Science exam.
