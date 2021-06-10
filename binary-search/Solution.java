@@ -2,7 +2,6 @@ import java.io.*;
 import java.util.*;
 
 class Solution {
-
     // Declaring variables
     int[] data;
     int[] sorted_data;
@@ -42,19 +41,23 @@ class Solution {
     // Sorting method for sorting the array in ascending order
     void sort() {
         int[] temp_data = new int[data.length];
-        for (int i = 0; i < data.length; i++)
+        for (int i = 0; i < data.length; i++) {
             temp_data[i] = data[i];
+        }
 
-        for (int i = 0, l = temp_data.length; i < l - 1; i++)
-            for (int j = 0; j < l - i - 1; j++)
+        for (int i = 0, l = temp_data.length; i < l - 1; i++) {
+            for (int j = 0; j < l - i - 1; j++) {
                 if (temp_data[j] > temp_data[j + 1]) {
                     int temp = temp_data[j];
                     temp_data[j] = temp_data[j + 1];
                     temp_data[j + 1] = temp;
                 }
+            }
+        }
 
-        for (int i = 0; i < temp_data.length; i++)
+        for (int i = 0; i < temp_data.length; i++) {
             sorted_data[i] = temp_data[i];
+        }
     }
 
     // Search method that searching for the key in the array
@@ -66,13 +69,11 @@ class Solution {
             if (sorted_data[m] == key) {
                 pos = m;
                 break;
-            }
-
-            else if (sorted_data[m] < key)
+            } else if (sorted_data[m] < key) {
                 l = m + 1;
-
-            else
+            } else {
                 r = m - 1;
+            }
         }
     }
 
@@ -81,10 +82,10 @@ class Solution {
         System.out.println("Original array - " + Arrays.toString(data));
         System.out.println("Sorted array - " + Arrays.toString(sorted_data));
 
-        if (pos != -1)
+        if (pos != -1) {
             System.out.println(key + " was found at [" + pos + "].");
-
-        else
+        } else {
             System.out.println(key + " was not found.");
+        }
     }
 }

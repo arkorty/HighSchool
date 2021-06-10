@@ -3,7 +3,6 @@ import java.time.*;
 import java.time.temporal.*;
 
 class Solution {
-
     // Declaring vaiables
     String date_1, date_2;
     long days;

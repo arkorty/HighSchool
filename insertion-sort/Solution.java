@@ -2,7 +2,6 @@ import java.io.*;
 import java.util.*;
 
 class Solution {
-
     // Declaring variables
     int[] data;
     int[] sorted_data;
@@ -35,8 +34,9 @@ class Solution {
     // Sorting method for sorting the array in ascending order
     void sort() {
         int[] temp_data = new int[data.length];
-        for (int i = 0; i < data.length; i++)
+        for (int i = 0; i < data.length; i++) {
             temp_data[i] = data[i];
+        }
 
         for (int i = 1, l = temp_data.length; i < l; ++i) {
             int temp = temp_data[i];
@@ -46,11 +46,13 @@ class Solution {
                 temp_data[j + 1] = temp_data[j];
                 j = j - 1;
             }
+
             temp_data[j + 1] = temp;
         }
 
-        for (int i = 0; i < temp_data.length; i++)
+        for (int i = 0; i < temp_data.length; i++) {
             sorted_data[i] = temp_data[i];
+        }
     }
 
     // Output method for displaying the results

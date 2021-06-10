@@ -1,7 +1,6 @@
 import java.io.*;
 
 class Solution {
-
     // Declaring variables
     String bin;
     int dec;
@@ -41,7 +40,6 @@ class Solution {
 
     // Output method for displaying the results
     void output() {
-
         if (dec != -1)
             System.out.println("Result: " + dec);
         else
